@@ -11,7 +11,7 @@ export const Button: React.FC<Props> = ({
   title,
   onClick,
   type = "",
-  size = "medium",
+  size = "",
   ...rest
 }) => {
   const event = () => {};
