@@ -1,5 +1,6 @@
 import "./App.scss";
 import { Button } from "./Components/Button";
+import { PageTitle } from "./Components/PageTitle";
 
 function App() {
   return (
@@ -14,8 +15,14 @@ function App() {
           justifyContent: "center",
         }}
       >
-        <h1>Boilerplate for midlight...</h1>
-        <Button title="Enregistrer" size="medium" type="primary" />
+        <div
+          style={{
+            marginBottom: "8px",
+          }}
+        >
+          <PageTitle>Midlight's repo</PageTitle>
+        </div>
+        <Button title="Got it !" size="medium" type="primary" />
       </div>
     </>
   );
