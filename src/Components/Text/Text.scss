@@ -1,0 +1,50 @@
+@import "~sass-rem";
+:host {
+  display: block;
+}
+
+.page-title {
+  font-family: inherit;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.page-subtitle {
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.heading {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.subheading {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.title {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.body-text {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.caption {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}

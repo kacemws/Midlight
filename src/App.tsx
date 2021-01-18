@@ -1,6 +1,6 @@
 import "./App.scss";
 import { Button } from "./Components/Button";
-import { PageTitle } from "./Components/PageTitle";
+import { PageTitle } from "./Components/Text";
 
 function App() {
   return (

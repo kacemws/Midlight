@@ -1,4 +1,4 @@
-import { Title } from "../Title";
+import { Title } from "../Text";
 import "./Button.scss";
 
 interface Props {
@@ -17,7 +17,7 @@ export const Button: React.FC<Props> = ({
 }) => {
   const event = () => {};
 
-  const titleElement = <Title title={title} />;
+  const titleElement = <Title>{title}</Title>;
 
   return (
     <div className={`button ${type} ${size}`} onClick={onClick ?? event}>
