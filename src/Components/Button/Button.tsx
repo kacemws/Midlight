@@ -4,12 +4,11 @@ import "./Button.scss";
 interface Props {
   type?: "primary" | "secondary" | "tertiary" | "warning";
   size?: "small" | "medium" | "large";
-  title: string;
   onClick?: () => void;
 }
 
 export const Button: React.FC<Props> = ({
-  title,
+  children,
   onClick,
   type = "",
   size = "",
@@ -17,7 +16,7 @@ export const Button: React.FC<Props> = ({
 }) => {
   const event = () => {};
 
-  const titleElement = <Title>{title}</Title>;
+  const titleElement = <Title>{children}</Title>;
 
   return (
     <div className={`button ${type} ${size}`} onClick={onClick ?? event}>
