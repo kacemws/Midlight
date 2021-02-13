@@ -1,0 +1,41 @@
+@import "~sass-rem";
+:host {
+  display: block;
+}
+
+.toast-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  .toast {
+    position: relative;
+    // top: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 5rem;
+    width: 18rem;
+
+    border-radius: rem(8px);
+    box-shadow: 0px 1px 3px 0px var(--neutral-400);
+    background-color: var(--neutral-300);
+
+    transition: 450ms ease-out;
+
+    &.error {
+      background-color: var(--danger-100);
+      color: var(--text-inverted) !important;
+    }
+
+    &.success {
+      background-color: var(--success-100);
+      color: var(--text-inverted) !important;
+    }
+  }
+}
