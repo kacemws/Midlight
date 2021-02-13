@@ -22,7 +22,9 @@ function App() {
         >
           <PageTitle>Midlight's repo</PageTitle>
         </div>
-        <Button title="Got it !" size="medium" type="primary" />
+        <Button size="medium" type="primary">
+          Got it !
+        </Button>
       </div>
     </>
   );
