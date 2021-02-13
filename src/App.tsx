@@ -1,8 +1,11 @@
+import { useState } from "react";
 import "./App.scss";
 import { Button } from "./Components/Button";
 import { PageTitle } from "./Components/Text";
+import { Toast } from "./Components/Toast";
 
 function App() {
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <div
@@ -13,6 +16,7 @@ function App() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          backgroundColor: "#f4f5f7",
         }}
       >
         <div
@@ -22,10 +26,17 @@ function App() {
         >
           <PageTitle>Midlight's repo</PageTitle>
         </div>
-        <Button size="medium" type="primary">
-          Got it !
+        <Button
+          size="medium"
+          type="primary"
+          onClick={() => {
+            setVisible(!visible);
+          }}
+        >
+          toggle toast
         </Button>
       </div>
+      <Toast type="success" active={visible} />
     </>
   );
 }
