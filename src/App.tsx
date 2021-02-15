@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./App.scss";
 import { Button } from "./Components/Button";
+import { Modal } from "./Components/Modal";
 import { PageTitle } from "./Components/Text";
 import { Toast } from "./Components/Toast";
 
 function App() {
-  const [visible, setVisible] = useState(false);
   const [successVisible, setSuccess] = useState(false);
-  const [errorVisible, setError] = useState(false);
+
+  const [active, setActive] = useState(false);
 
   return (
     <>
@@ -40,49 +41,24 @@ function App() {
         >
           <Button
             size="medium"
-            type="tertiary"
-            onClick={() => {
-              setVisible(!visible);
-            }}
-          >
-            toggle Loading Toast
-          </Button>
-          <Button
-            size="medium"
             type="primary"
             onClick={() => {
               setSuccess(!successVisible);
+              setActive(true);
             }}
           >
             toggle Success Toast
           </Button>
-          <Button
-            size="medium"
-            type="warning"
-            onClick={() => {
-              setError(!errorVisible);
-            }}
-          >
-            toggle Error Toast
-          </Button>
         </div>
       </div>
       {/**/}
-      <Toast
-        type="loading"
-        active={visible}
-        onClose={() => setVisible(false)}
-      />
-      <Toast
+      {/* <Toast
         type="success"
         active={successVisible}
         onClose={() => setSuccess(false)}
-      />
-      <Toast
-        type="error"
-        active={errorVisible}
-        onClose={() => setError(false)}
-      />
+      /> */}
+      {/**/}
+      <Modal active={active} onClick={() => setActive(false)} />
     </>
   );
 }
