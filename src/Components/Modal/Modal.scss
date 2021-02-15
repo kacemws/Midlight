@@ -42,6 +42,8 @@
     }
 
     @include media("<=tablet") {
+      align-self: flex-end;
+      height: 75%;
       width: 100%;
     }
   }
