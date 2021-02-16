@@ -1,6 +1,8 @@
 import "./Modal.scss";
 
-const Section: React.FC<{}> = (props) => <div className="modal-section"></div>;
+const Section: React.FC<{}> = ({ children, ...rest }) => (
+  <div className="modal-section">{children}</div>
+);
 interface Props {
   active: boolean;
   onClick: () => void;
@@ -21,7 +23,11 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
       className={`modal-wrapper ${active ? "active" : ""}`}
       onClick={(_) => onClick()}
     >
-      <div className={`modal ${active ? "active" : ""}`}>{children}</div>
+      <div className={`modal ${active ? "active" : ""}`}>
+        <div className="modal-header"></div>
+        <div className="modal-section-wrapper">{children}</div>
+        <div className="modal-footer"></div>
+      </div>
     </div>
   );
 };
