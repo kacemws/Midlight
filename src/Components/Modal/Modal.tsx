@@ -1,3 +1,5 @@
+import { Heading } from "../Text";
+import close from "../../Assets/close.svg";
 import "./Modal.scss";
 
 const Section: React.FC<{}> = ({ children, ...rest }) => (
@@ -5,7 +7,7 @@ const Section: React.FC<{}> = ({ children, ...rest }) => (
 );
 interface Props {
   active: boolean;
-  onClick: () => void;
+  onClose: () => void;
 }
 
 interface ModalSubComponents {
@@ -14,17 +16,24 @@ interface ModalSubComponents {
 
 export const Modal: React.FC<Props> & ModalSubComponents = ({
   active,
-  onClick,
+  onClose,
   children,
   ...rest
 }) => {
   return (
     <div
       className={`modal-wrapper ${active ? "active" : ""}`}
-      onClick={(_) => onClick()}
+      onClick={(_) => onClose()}
     >
-      <div className={`modal ${active ? "active" : ""}`}>
-        <div className="modal-header"></div>
+      <div className={`modal`}>
+        <div className="modal-header">
+          <Heading>Title</Heading>
+          <img
+            className="modal-header-close"
+            src={close}
+            onClick={(_) => onClose()}
+          />
+        </div>
         <div className="modal-section-wrapper">{children}</div>
         <div className="modal-footer"></div>
       </div>
