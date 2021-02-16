@@ -2,10 +2,8 @@ import { Heading } from "../Text";
 import close from "../../Assets/close.svg";
 import "./Modal.scss";
 import { Button } from "../Button";
+import { Section } from "./Subcomponents";
 
-const Section: React.FC<{}> = ({ children, ...rest }) => (
-  <div className="modal-section">{children}</div>
-);
 interface Props {
   active: boolean;
   onClose: () => void;
