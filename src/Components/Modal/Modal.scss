@@ -74,6 +74,9 @@
     .modal-footer {
       box-shadow: 0px 1px 3px 1px var(--neutral-500);
       border-top: rem(1px) solid var(--neutral-400);
+      .modal-primary-button-wrapper {
+        margin-left: auto;
+      }
     }
 
     .modal-section-wrapper {

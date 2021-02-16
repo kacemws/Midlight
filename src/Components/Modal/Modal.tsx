@@ -1,6 +1,7 @@
 import { Heading } from "../Text";
 import close from "../../Assets/close.svg";
 import "./Modal.scss";
+import { Button } from "../Button";
 
 const Section: React.FC<{}> = ({ children, ...rest }) => (
   <div className="modal-section">{children}</div>
@@ -8,6 +9,15 @@ const Section: React.FC<{}> = ({ children, ...rest }) => (
 interface Props {
   active: boolean;
   onClose: () => void;
+  primaryButton?: {
+    title: string;
+    onClick?: () => void;
+  };
+  secondaryButton?: {
+    title: string;
+    type: "normal" | "warning";
+    onClick?: () => void;
+  };
 }
 
 interface ModalSubComponents {
@@ -18,6 +28,8 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
   active,
   onClose,
   children,
+  primaryButton,
+  secondaryButton,
   ...rest
 }) => {
   return (
@@ -25,7 +37,12 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
       className={`modal-wrapper ${active ? "active" : ""}`}
       onClick={(_) => onClose()}
     >
-      <div className={`modal`}>
+      <div
+        className={`modal`}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="modal-header">
           <Heading>Title</Heading>
           <img
@@ -35,7 +52,27 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
           />
         </div>
         <div className="modal-section-wrapper">{children}</div>
-        <div className="modal-footer"></div>
+        <div className="modal-footer">
+          {secondaryButton && (
+            <Button
+              type={
+                secondaryButton.type == "normal"
+                  ? "tertiary"
+                  : secondaryButton?.type
+              }
+              onClick={secondaryButton?.onClick}
+            >
+              {secondaryButton?.title}
+            </Button>
+          )}
+          {primaryButton && (
+            <div className="modal-primary-button-wrapper">
+              <Button type="primary" onClick={primaryButton?.onClick}>
+                {primaryButton?.title}
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
