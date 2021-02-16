@@ -73,12 +73,14 @@
       width: 100%;
       overflow-y: auto;
       overflow-x: hidden;
+      min-height: 6rem;
       .modal-section {
-        min-height: 20rem;
+        min-height: 6rem;
+        padding: 0.25rem 0;
+        background-color: var(--neutral-200);
         border-bottom: rem(1px) solid var(--neutral-400);
         &:last-child {
           border-bottom: none;
-          background-color: var(--neutral-200);
         }
       }
     }
