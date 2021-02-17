@@ -93,6 +93,9 @@
         &:last-child {
           border-bottom: none;
         }
+        .modal-section-content {
+          padding: 0.25rem 0;
+        }
       }
     }
   }

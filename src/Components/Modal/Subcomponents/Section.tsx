@@ -11,6 +11,6 @@ export const Section: React.FC<Props> = ({ title, children, ...rest }) => (
         <Heading>{title}</Heading>
       </div>
     )}
-    {children}
+    <div className="modal-section-content">{children}</div>
   </div>
 );
