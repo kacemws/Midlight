@@ -23,42 +23,8 @@ function App() {
           backgroundColor: "#f4f5f7",
         }}
       >
-        <div
-          style={{
-            marginBottom: "8px",
-          }}
-        >
-          <PageTitle>Midlight's repo</PageTitle>
-        </div>
-        <div
-          style={{
-            width: "50%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            marginTop: "1vh",
-          }}
-        >
-          <Button
-            size="medium"
-            type="primary"
-            onClick={() => {
-              setSuccess(!successVisible);
-              setActive(true);
-            }}
-          >
-            toggle Success Toast
-          </Button>
-        </div>
+        <PageTitle>Midlight's repo</PageTitle>
       </div>
-      {/**/}
-      {/* <Toast
-        type="success"
-        active={successVisible}
-        onClose={() => setSuccess(false)}
-      /> */}
-      {/**/}
-      <Modal active={active} onClick={() => setActive(false)} />
     </>
   );
 }
