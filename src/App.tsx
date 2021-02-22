@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "./App.scss";
-import { Button } from "./Components/Button";
-import { Modal } from "./Components/Modal";
 import { PageTitle } from "./Components/Text";
-import { Toast } from "./Components/Toast";
 
 function App() {
   const [successVisible, setSuccess] = useState(false);
