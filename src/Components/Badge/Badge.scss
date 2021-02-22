@@ -1,0 +1,21 @@
+@import "~sass-rem";
+:host {
+  display: block;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--neutral-200);
+  border: 0;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: var(--text);
+  font-weight: 400;
+  &.small {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}
