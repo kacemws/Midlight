@@ -7,6 +7,7 @@ import { Section } from "./Subcomponents";
 interface Props {
   active: boolean;
   onClose: () => void;
+  title?: string;
   primaryButton?: {
     title: string;
     onClick?: () => void;
@@ -25,6 +26,7 @@ interface ModalSubComponents {
 export const Modal: React.FC<Props> & ModalSubComponents = ({
   active,
   onClose,
+  title = "",
   children,
   primaryButton,
   secondaryButton,
@@ -42,7 +44,7 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
         }}
       >
         <div className="modal-header">
-          <Heading>Title</Heading>
+          <Heading>{title}</Heading>
           <img
             className="modal-header-close"
             src={close}
@@ -55,7 +57,7 @@ export const Modal: React.FC<Props> & ModalSubComponents = ({
             <Button
               type={
                 secondaryButton.type == "normal"
-                  ? "tertiary"
+                  ? "secondary"
                   : secondaryButton?.type
               }
               onClick={secondaryButton?.onClick}
