@@ -1,4 +1,6 @@
 import { Introduction } from "./Introduction";
+import "../App.scss";
+import "../Styles/colors.scss";
 
 // import "../index.css";
 export default {
