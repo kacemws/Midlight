@@ -1,4 +1,4 @@
-import { Title } from "../Text";
+import { Caption } from "../Text";
 import "./Badge.scss";
 
 interface Props {
@@ -22,6 +22,8 @@ export const Badge: React.FC<Props> = ({
   ...rest
 }) => {
   return (
-    <div className={`badge ${progress} ${size} ${status}`}>{children}</div>
+    <div className={`badge ${progress} ${size} ${status}`}>
+      <div>{children}</div>
+    </div>
   );
 };
