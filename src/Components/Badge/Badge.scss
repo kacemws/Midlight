@@ -24,6 +24,7 @@
   }
   &.success {
     background-color: var(--success-100);
+    color: var(--text-inverted);
   }
   &.attention {
     background-color: var(--warning-100);
@@ -33,8 +34,10 @@
   }
   &.warning {
     background-color: var(--danger-100);
+    color: var(--text-inverted);
   }
   &.new {
     background-color: var(--primary-100);
+    color: var(--text-inverted);
   }
 }
