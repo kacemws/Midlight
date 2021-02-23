@@ -23,6 +23,7 @@ export const Badge: React.FC<Props> = ({
 }) => {
   return (
     <div className={`badge ${progress} ${size} ${status}`}>
+      <div className="progress-wrapper"></div>
       <div>{children}</div>
     </div>
   );
