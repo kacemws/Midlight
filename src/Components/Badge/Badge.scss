@@ -4,10 +4,10 @@
 }
 
 .badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 0.3rem 0.8rem;
-  background-color: var(--neutral-200);
+  background-color: var(--neutral-300);
   border: 0;
   border-radius: 2rem;
   font-size: 1.3rem;
@@ -17,5 +17,24 @@
   &.small {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+
+  &.info {
+    background-color: #a4e8f2;
+  }
+  &.success {
+    background-color: var(--success-100);
+  }
+  &.attention {
+    background-color: var(--warning-100);
+  }
+  &.critical {
+    background-color: var(--secondary-400);
+  }
+  &.warning {
+    background-color: var(--danger-100);
+  }
+  &.new {
+    background-color: var(--primary-100);
   }
 }
