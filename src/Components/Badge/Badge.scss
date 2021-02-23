@@ -40,4 +40,38 @@
     background-color: var(--primary-100);
     color: var(--text-inverted);
   }
+
+  .progress-wrapper {
+    display: none;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 0.4rem 0 -0.3rem;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &.incomplete {
+    .progress-wrapper {
+      display: block;
+    }
+  }
+  &.partiallyComplete {
+    .progress-wrapper {
+      display: block;
+      background: linear-gradient(
+        0deg,
+        currentColor,
+        currentColor 50%,
+        transparent 0,
+        transparent
+      );
+    }
+  }
+  &.complete {
+    .progress-wrapper {
+      display: block;
+      background: currentColor;
+    }
+  }
 }
