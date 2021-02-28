@@ -1,0 +1,76 @@
+@import "~sass-rem";
+:host {
+  display: block;
+}
+.card {
+  position: relative;
+
+  padding: rem(24px);
+
+  background-color: var(--neutral-100);
+  box-shadow: rem(0px) rem(1px) rem(8px) rem(4px) var(--neutral-300);
+  border-radius: rem(8px);
+
+  .card-content {
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin: rem(8px) 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(64, 64, 64, 0.15);
+        // box-shadow: 0 1px 3px 0;
+        // &:first-child {
+        //   border-top-left-radius: 0.5rem;
+        //   border-top-right-radius: 0.5rem;
+        // }
+        // &:last-child {
+        //   border-bottom-left-radius: 0.5rem;
+        //   border-bottom-right-radius: 0.5rem;
+        //   border: none;
+        // }
+      }
+    }
+  }
+
+  //   ol {
+  //     margin: 0;
+  //     padding: 0;
+  //     list-style: none;
+  //     // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  //     li {
+  //       margin: 0;
+  //       padding: 0;
+  //       list-style: none;
+  //       position: relative;
+  //       overflow: hidden;
+  //       border-bottom: 1px solid rgba(64, 64, 64, 0.15);
+  //       box-shadow: 0 1px 3px 0 rgba(64, 64, 64, 0.35);
+  //       &:first-child {
+  //         border-top-left-radius: 0.5rem;
+  //         border-top-right-radius: 0.5rem;
+  //       }
+  //       &:last-child {
+  //         border-bottom-left-radius: 0.5rem;
+  //         border-bottom-right-radius: 0.5rem;
+  //         border: none;
+  //       }
+
+  //       animation: 200ms cubic-bezier(0.64, 0, 0.35, 1) ease-in;
+  //       // animation-iteration-count: infinite;
+
+  //       @include animation-keyframes {
+  //         from {
+  //           left: -200px;
+  //         }
+  //         to {
+  //           left: 0;
+  //         }
+  //       }
+  //     }
+  //   }
+}
