@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface CardSubComponents {
-  Section?: typeof Section;
+  Section: typeof Section;
 }
 
 export const Card: React.FC<Props> & CardSubComponents = ({
