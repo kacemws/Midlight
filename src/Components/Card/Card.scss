@@ -20,6 +20,12 @@
     align-items: center;
   }
 
+  .card-footer {
+    .card-footer-wrapper {
+      margin-left: auto;
+    }
+  }
+
   .card-content {
     ol {
       margin: 0;
