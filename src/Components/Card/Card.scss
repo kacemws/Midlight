@@ -14,7 +14,7 @@
 
   .card-title,
   .card-footer {
-    height: rem(32px);
+    height: rem(26px);
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,13 +34,16 @@
       li {
         margin: rem(8px) 0;
         padding: 0;
-        padding-bottom: rem(8px);
+        padding-bottom: rem(4px);
         width: 100%;
         list-style: none;
         overflow: hidden;
         border-bottom: 1px solid rgba(64, 64, 64, 0.15);
         &:last-child {
           border: none;
+        }
+        .card-section-content {
+          padding: rem(4px) 0;
         }
       }
     }
