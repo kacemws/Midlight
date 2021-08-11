@@ -4,7 +4,18 @@
 }
 
 .tabs-container {
+  width: 100%;
   .tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.15);
+    overflow-y: hidden;
+    overflow-x: auto;
+    .tab {
+      min-width: rem(24px);
+      margin: 0 2rem;
+    }
   }
 
   .tabs-content {
